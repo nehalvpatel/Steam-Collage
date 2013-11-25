@@ -3,7 +3,7 @@ Steam Collage
 
 ![Steam Collage](http://i.imgur.com/FX0rgSi.png "Steam Collage")
 
-A tool that generates a grid of a person's Steam games
+A tool that generates a grid of a person's Steam games ([Example](http://i.imgur.com/fYqcwSa.jpg))
 
 **Current Version:** 1.0.0
 
