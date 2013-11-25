@@ -72,8 +72,8 @@ Public Class frmMain
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If lstSizes.SelectedIndex >= 0 Then
-            sfdCollage.Filter = "Bitmap (*.bmp)|*.bmp|JPEG (*.jpg)|*.jpg|PNG (*.png)|*.png"
-            sfdCollage.FilterIndex = 0
+            sfdCollage.Filter = "JPEG (*.jpg)|*.jpg|PNG (*.png)|*.png"
+            sfdCollage.FilterIndex = 2
             If sfdCollage.ShowDialog() = Windows.Forms.DialogResult.OK Then
                 txtSteamID.Enabled = False
                 btnFetch.Enabled = False
@@ -105,9 +105,7 @@ Public Class frmMain
                 Loop
 
                 Dim imageExtension As String = Path.GetExtension(sfdCollage.FileName).ToLower
-                If imageExtension = ".bmp" Then
-                    collage.Save(sfdCollage.FileName, ImageFormat.Bmp)
-                ElseIf imageExtension = ".jpg" Then
+                If imageExtension = ".jpg" Then
                     collage.Save(sfdCollage.FileName, ImageFormat.Jpeg)
                 ElseIf imageExtension = ".png" Then
                     collage.Save(sfdCollage.FileName, ImageFormat.Png)
